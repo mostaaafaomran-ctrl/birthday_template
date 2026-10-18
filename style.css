@@ -122,14 +122,5 @@ h2.sec::after{content:"♡";display:block;font-size:1.1rem;color:var(--accent2);
     height: auto !important;
   }
 
-  /* 6. تكبير الأزرار لسهولة الضغط باليد */
-  button, .btn {
-    width: 100% !important; /* يجعل الزر بعرض الشاشة في الموبايل */
-    padding: 12px 20px !important;
-    font-size: 1rem !important;
-  }
-}/* إلغاء التمرير في صفحة الباسورد */
-body {
-  overflow: hidden; /* يمنع ظهور شريط التمرير رأسي أو أفقي */
-  height: 100vh;    /* يجعل الصفحة على مقاس الشاشة بالضبط */
+    /* 6. ضبط الأزرار لتكون أكبر وأسهل للنقر */
 }
