@@ -76,3 +76,60 @@ h2.sec::after{content:"♡";display:block;font-size:1.1rem;color:var(--accent2);
 .cf{position:absolute;top:-20px;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
 .letter{margin-top:60px;background-image:radial-gradient(circle at top,color-mix(in srgb,var(--accent2) 18%,transparent),transparent 70%)}
+/* ==========================================
+   تنسيقات الشاشات الصغيرة (الموبايل والهواتف)
+   ========================================== */
+@media (max-width: 768px) {
+  
+  /* 1. ضبط الحاويات والشاشة الرئيسية لتفادي التمرير الأفقي */
+  body, container, main {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden; /* لمنع ظهور شريط تحريك أفقي */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* 2. تحويل الشبكات والأعمدة لعمود واحد فوق بعضه */
+  .grid, .row, .container-flex {
+    display: flex !important;
+    flex-direction: column !important; /* ترتيب العناصر رأسياً */
+    gap: 15px;
+  }
+
+  /* 3. تعديل النافبار وقائمة التنقل */
+  nav, .navbar {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  nav ul, .menu {
+    flex-direction: column !important;
+    width: 100%;
+    padding: 0;
+  }
+
+  /* 4. ضبط أحجام الخطوط والعناوين لكي لا تخرج عن الشاشة */
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.2rem !important; }
+  p { font-size: 1rem !important; line-height: 1.6; }
+
+  /* 5. تجاوب الصور والفيديوهات تلقائياً */
+  img, video, iframe {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. تكبير الأزرار لسهولة الضغط باليد */
+  button, .btn {
+    width: 100% !important; /* يجعل الزر بعرض الشاشة في الموبايل */
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
+  }
+}/* إلغاء التمرير في صفحة الباسورد */
+body {
+  overflow: hidden; /* يمنع ظهور شريط التمرير رأسي أو أفقي */
+  height: 100vh;    /* يجعل الصفحة على مقاس الشاشة بالضبط */
+}
